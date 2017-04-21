@@ -1,46 +1,64 @@
-/*
-    This Interface will be used to build a player for our tournament
-    database. Each player will have a name, tag, unique Id, rank,
-    and sponsors.
-*/
-public interface Player {
 
-    // Put constructor here
+public class Player {
 
-    /*
-        This function will be used to get the name
-        of the player.
-        @param - id - unique player id
-    */
-    void getName();
+    private String name;
+    private String tag;
+    private int id;
+    private int rank;
+    private String sponsor;
 
-    /*
-        This function will be used to get the tag
-        of the player
-        @param - id - unique player id
-    */
-    void getTag();
+    // constructor
+    public Player(String name){
 
-    /*
-        This function will be used to get the unique
-        id of the player
-        @param - name - name of the player
-        @param - tag - the tag of the player
-    */
-    void getId();
+        this.name = name;
 
-    /*
-        This function will be used to get the rank
-        of the player
-        @param - id - unique player id
-    */
-    void getRank();
+    }
 
-    /*
-        This function will be used to get any
-        sponsors the player may have
-        @param - id - unique player id
-    */
-    void getSponsor();
+    // name
+    public String getName(){
+        return this.name;
+    }
 
+    public void setName(String name){
+        this.name = name;
+    }
+
+    // tag
+    public String getTag(){
+        return this.tag;
+    }
+
+    public void setTag(String tag){
+        this.tag = tag;
+    }
+
+    // id
+    public void setID(int num){
+        this.id = num;
+    }
+    public int getID(){
+        return this.id;
+    }
+
+    // rank
+    public void setRank(int num){
+        this.rank += num;
+    }
+
+    public int getRank(){
+        return this.rank;
+    }
+
+    //sponsor
+    public void setSponsor(String name){
+        this.sponsor = name;
+    }
+
+    public String getSponsor(){
+        return this.sponsor;
+    }
+
+    public static void main(String[] args) {
+        System.out.println("hELLO");
+    }
 }
